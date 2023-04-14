@@ -10,4 +10,4 @@ btnSave.addEventListener("click", () => {
   window.electron.saveFile();
 });
 
-window.electron.stuff();
+window.electron.something();
