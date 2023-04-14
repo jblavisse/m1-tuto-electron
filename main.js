@@ -39,15 +39,18 @@ function createWindow() {
   //   dialog.showOpenDialog(win, dialogFileOptions).then((result) => {
   //     console.log(result);
   //   });
-
-  //   dialog.showSaveDialog(win, dialogSaveOptions).then((result) => {
-  //     fs.writeFile(result.filePath, "Coucou!", (err) => {
-  //       if (err) console.log(err);
-  //       console.log("The file has been saved!");
-  //     });
-  //   });
   ipcMain.on("msg", (event, arg) => {
     console.log(arg);
+    win.webContents.send("stuff", "Kikou!");
+  });
+
+  ipcMain.on("save-file", (event, arg) => {
+    dialog.showSaveDialog(win, dialogSaveOptions).then((result) => {
+      fs.writeFile(result.filePath, "Coucou!", (err) => {
+        if (err) console.log(err);
+        console.log("The file has been saved!");
+      });
+    });
   });
 }
 
