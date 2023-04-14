@@ -1,4 +1,17 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, dialog } = require("electron");
+
+const dialogOptions = {
+  type: "warning",
+  title: "Mer il et fou!",
+  message: "Wow, attention c'est dangereux!",
+  buttons: ["Oui, je suis fou", "Non, je ne suis pas fou"],
+};
+
+const dialogFileOptions = {
+  title: "Sélectionner un fichier",
+  buttonLabel: "Ouvrir",
+  filters: [{ name: "Images", extensions: ["jpg", "png", "gif"] }],
+};
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -6,7 +19,14 @@ function createWindow() {
     height: 600,
   });
 
-  win.loadFile("index.html");
+  win.loadFile("src/index.html");
+  dialog.showMessageBox(win, dialogOptions).then((result) => {
+    console.log(result);
+  });
+
+  dialog.showOpenDialog(win, dialogFileOptions).then((result) => {
+    console.log(result);
+  });
 }
 
 app.whenReady().then(() => {

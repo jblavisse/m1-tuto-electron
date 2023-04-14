@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Liste d'utilisateurs</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body>
+    <div class="flex">
+      <aside
+        class="flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2"
+        style="height: 90.5vh"
+      >
+        <a
+          href="index.html"
+          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
+        >
+          <span>Accueil</span>
+        </a>
+
+        <a
+          href="users.html"
+          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
+        >
+          <span>Utilisateurs</span>
+        </a>
+      </aside>
+      <div class="container mx-auto my-8">
+        <table class="table-auto">
+          <thead>
+            <tr>
+              <th class="px-4 py-2">Nom</th>
+              <th class="px-4 py-2">Prénom</th>
+              <th class="px-4 py-2">Email</th>
+              <th class="px-4 py-2">Téléphone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-2">Doe</td>
+              <td class="border px-4 py-2">John</td>
+              <td class="border px-4 py-2">john.doe@example.com</td>
+              <td class="border px-4 py-2">555-555-1212</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Smith</td>
+              <td class="border px-4 py-2">Jane</td>
+              <td class="border px-4 py-2">jane.smith@example.com</td>
+              <td class="border px-4 py-2">555-555-1212</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Garcia</td>
+              <td class="border px-4 py-2">Maria</td>
+              <td class="border px-4 py-2">maria.garcia@example.com</td>
+              <td class="border px-4 py-2">555-555-1212</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Kim</td>
+              <td class="border px-4 py-2">Jin</td>
+              <td class="border px-4 py-2">jin.kim@example.com</td>
+              <td class="border px-4 py-2">555-555-1212</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Wang</td>
+              <td class="border px-4 py-2">Wei</td>
+              <td class="border px-4 py-2">wei.wang@example.com</td>
+              <td class="border px-4 py-2">555-555-1212</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Sato</td>
+              <td class="border px-4 py-2">Yuki</td>
+              <td class="border px-4 py-2">yuki.sato@example.com</td>
+              <td class="border px-4 py-2">555-555-1212</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
